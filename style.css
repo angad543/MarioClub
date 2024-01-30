@@ -1,0 +1,305 @@
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+  }
+p{
+    font-size: 25px;
+}
+p::selection{
+    background-color: #F63232;
+    color:white;
+}
+header{
+    background-color:#F63232;
+    text-align: center;
+    padding:20px 0;/*top-20 right-0 bottom-20 left-0*/
+    width:100%;    /*TRBL-TOP Bottom Right Left*/
+    top:0;
+    left:0;
+    position: fixed;
+    z-index: 1;
+}
+header h1{
+    color:white;
+    font-size: 60px;
+    border:white solid 8px;
+    border-radius: 45px;
+    display: inline-block;
+    padding:8px 12px;
+}
+.banner{
+    width: 100%;
+    position:relative;
+}
+.welcome{
+    background: #FEB614;
+    display: inline-block;
+    padding:30px;
+    font-size: 60px;
+    color: white;
+    top:40%;
+    position:absolute;
+    left:15%;
+}
+span{
+    font-size: 1.4em;
+}
+nav{
+    background: #F4F4F4;
+    padding: 20px;
+    position: sticky;
+    top:130px;
+    z-index: 1;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+nav ul li{
+    display: inline-block;
+    font-size: 30px;
+    width:25%;
+}
+nav li a{
+    color:rgb(35,43,43);
+    text-decoration: none;
+}
+nav li a:hover{
+    color: #FEB614;
+    font-size:29.5px;
+    text-decoration: underline;
+}
+main{
+    max-width: 100%;
+    margin: 80px auto;/*top=80 margin bottom=auto*/
+    padding: 0 40px;
+    width:1600px;
+}
+article h2{
+    font-size: 40px;
+    color:#F63232;
+}
+article p{
+    line-height:2em;
+    font-size:24px;
+}
+article p::first-line{
+    font-weight: bold;
+    font-size:1.15em;
+}
+.images{
+    text-align: center;
+    margin: 70px;
+    white-space: nowrap;
+}
+.images li{
+    display:inline-block;
+    width:40%;
+    margin:20px 5%;
+}
+.images li img{
+    max-width:100%;
+}
+.images li:hover{
+    position: relative;
+    bottom: 6px;
+}
+.join{
+    background-color: #F4F4F4;
+    text-align: center;
+    padding: 60px 20px;
+    color:#4B4B4B;
+}
+.join h2{
+    font-size: 36px;
+    color: #FEB614;
+}
+.join p::first-letter{
+    font-size: 1.4em;
+}
+.join p::selection{
+    background-color: #FEB614;
+    color:white;
+}
+/*nned to explicitly change the colour of the first letter here*/
+.join p::first-letter::selection{
+    background-color: #FEB614;
+    color:white;
+}
+form input{
+    margin: 20px 20px;
+    padding:10px 20px;
+    color:black;
+    border:4px solid white;
+    border-radius:30px;
+    font-size: 25px;
+}
+footer{
+    background: #232f3e;
+    background: #F63232;
+    padding: 10px;
+    color:white;
+    text-align: center;
+}
+footer span{
+    text-align: left;
+    font-size: 1em;
+}
+footer p span a{
+    color:white;
+    font-size: 1em;
+}
+.footer p{
+    margin: 0px;
+}
+.left{
+    position:absolute;
+    left:100px;
+}
+.center{
+    text-align: center;
+}
+form input:focus{
+    border:dashed 4px #FEB614;
+    outline: none;
+}
+form input:valid{
+    border:4px solid #AAFF00;
+}
+/*we start from max-width responsiveness needed to minimum width as in css the command
+that is declared later has a greater priority so ifwe write max-1200 in first line
+and max-1000 in second so max-1000 being gmaller and covering max-1200 it will be 
+only implemented*/
+@media screen and (max-width:1850px){
+    .welcome{
+        font-size: 50px;
+        padding: 30px;
+    }
+}
+@media screen and (max-width:1760px){
+    .welcome{
+        font-size: 35px;
+        padding: 22px;
+        top:35%;
+    }
+}
+@media screen and (max-width:1430px) {
+    .welcome{
+        font-size: 30px;
+        padding: 20px;
+        top:25%;
+    }
+    header{
+        padding:15px;
+    }
+    header h1{
+        font-size:45px;
+        padding:6px;
+    }
+    span{
+        font-size: 1.2em;
+    }
+    nav ul li{
+        font-size:25px;
+    } 
+}
+@media screen and (max-width:1095px) {
+    .welcome{
+        font-size: 25px;
+        padding: 15px;
+        top:20%;
+        left:10%;
+    }
+    nav{
+        top:115px;
+    }
+    footer{
+        text-align: right;
+    }
+}
+@media screen and (max-width:825px) {
+    p{
+        font-size: 22px;
+    }
+    .welcome{
+        font-size:18px;
+        padding:8px;
+        top:12%;
+        left:6%;
+    }
+    article h2{
+        font-size: 25px;
+    }
+    article p::first-line{
+        font-weight: normal;
+        font-size:1em;
+    }
+    article p{
+        font-size: 22px;;
+    }
+    footer{
+        text-align: center;
+    }
+    .left{
+        display: none;
+    }
+    .center{
+        display:block;
+    }
+    .join p::first-letter{
+        font-size: 1em;
+    }
+    header{
+        padding:8px;
+    }
+    header h1{
+        font-size:30px;
+        padding:5px;
+    }
+    nav{
+        top:70px;
+    }
+    .join{
+        padding: 40px 15px;
+    }
+    .images{
+        margin: 30px;
+    }
+    .images li{
+        display:block;
+        margin:20px;
+        width:70%;
+    }
+}
+@media screen and (max-width:650px) {
+    .header{
+        padding: 2px;
+    }
+    .header h1{
+        font-size:25px;
+        padding:5px;
+    }
+    .welcome{
+        font-size:14px;
+        padding:6px;
+        top:6%;
+        left:4%;
+    }
+    .join h2{
+        font-size:25px;
+    }
+    nav{
+        padding:10px;   
+    }
+    nav ul{
+        max-width: 40%;
+    }
+    nav ul li{
+        display:block;
+        font-size: 22px;
+    }
+}
